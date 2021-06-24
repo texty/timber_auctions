@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Електронні аукціони деревини</title>
+
+    <!-- OpenGraph Meta Tags -->
+    <meta property="fb:app_id" content="329250623807149"/>
+    <meta property="og:site_name" content="ТЕКСТИ.ORG.UA"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title"
+          content="Електронні аукціони деревини"/>
+    <!--<meta property="og:image" content="https://texty.org.ua/d/2020/ternopil_edmoney/img/cover.png"/>-->
+    <meta property="og:description"
+          content="Як навчальні заклади Тернополя використовують благодійну допомогу"/>
+    <meta property="og:url" content="https://texty.org.ua/d/2020/ternopil_edmoney/"/>
+
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:site" content="@textyorgua"/>
+    <meta property="twitter:account_id" content="49572937"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:url" content="https://texty.org.ua/d/2020/ternopil_edmoney/">
+    <meta name="twitter:title"
+          content="Електронні аукціони деревини"/>
+    <meta name="twitter:description"
+          content="Як навчальні заклади Тернополя використовують благодійну допомогу"/>
+    <!--<meta name="twitter:image:src" content="https://texty.org.ua/d/2020/ternopil_edmoney/img/cover.png"/>-->
+    <meta name="twitter:image:width" content="1200"/>
+    <meta name="twitter:image:height" content="630"/>
+
+
+    <!-- Other Meta Tags -->
+    <meta name="title" content="Електронні аукціони деревини">
+    <meta name="description" content="Як навчальні заклади Тернополя використовують благодійну допомогу">
+
+
+    <!--<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"  rel="stylesheet">-->
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.css" rel="stylesheet">-->
+
+    <link href="css/style.css" rel="stylesheet"/>
+
+
+
+
+</head>
+<body>
+<header>
+    <div class="image-container">
+        <!--<img src="img/cover.png"/>-->
+    </div>
+    <div class="content">
+        <div class="title-wrapper">
+            <div class="title">
+                <h1>Електронні аукціони деревини</h1>
+                <h4>Чи «прозорішає» український ринок</h4>
+                <a href="#main" class="button">Переглянути проєкт</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="logo-wrapper">
+        <div class="content">
+            <!--<div class="logo-list">-->
+                <!--<img id="cyfra" class="logo" src="img/mincyfra.png" />-->
+                <!--<img id="ternopil" class="logo" src="img/ternopil-logo.png" />-->
+                <!--<img id="usaid" class="logo" src="img/usaid.png" />-->
+                <!--<img id="ukaid" class="logo" src="img/ukaid.png" />-->
+                <!--<img id="eurasia" class="logo" src="img/eurasia.png" />-->
+                <!--<img id="texty" class="logo" src="img/textylogo.svg" />-->
+            <!--</div>-->
+        </div>
+    </div>
+</header>
+
+
+<main id="main">
+
+    <div class="text">
+        <p>Уряд готує масштабну реформу ринку деревини. Міндовкілля пропонує лісгоспам продавати
+            необроблену деревину виключно через відкриті електронні аукціони. Це зробить ринок прозорішим
+            та зручнішим для всіх, а також виведе значні суми коштів із тіні. Минулого року уряд запустив «пілот»
+            цієї реформи, зобов’язавши великі лісгоспи реалізувати щонайменше 25% від своєї лісозаготівлі через
+            відкриті аукціони системи Прозорро.Продажі. У цьому проекті ми аналізуємо відкриті дані Прозорро.
+            Продажі та розповідаємо наскільки успішним був урядовий експеримент із запуску відкритих
+            електронних торгів.</p>
+        <p>Уряд готує масштабну реформу ринку деревини. Міндовкілля пропонує лісгоспам продавати
+            необроблену деревину виключно через відкриті електронні аукціони. Це зробить ринок прозорішим
+            та зручнішим для всіх, а також виведе значні суми коштів із тіні. Минулого року уряд запустив «пілот»
+            цієї реформи, зобов’язавши великі лісгоспи реалізувати щонайменше 25% від своєї лісозаготівлі через
+            відкриті аукціони системи Прозорро.Продажі. У цьому проекті ми аналізуємо відкриті дані Прозорро.
+            Продажі та розповідаємо наскільки успішним був урядовий експеримент із запуску відкритих
+            електронних торгів.</p>
+    </div>
+
+    <div class="chart-wrapper">
+        <div id="switch-buttons" style="display: block;">
+            <div class="switch-line active" value="number">Кількість аукціонів</div>
+            <div class="switch-line" value="value">Оголошена вартість</div>
+            <div class="switch-line" value="success">Успішні аукціони</div>
+            <div class="switch-line" value="revenue">Дохід</div>
+        </div>
+
+        <div id="chart-1"></div>
+    </div>
+
+
+    <div class="text">
+        <p>Уряд готує масштабну реформу ринку деревини. Міндовкілля пропонує лісгоспам продавати
+            необроблену деревину виключно через відкриті електронні аукціони. Це зробить ринок прозорішим
+            та зручнішим для всіх, а також виведе значні суми коштів із тіні. Минулого року уряд запустив «пілот»
+            цієї реформи, зобов’язавши великі лісгоспи реалізувати щонайменше 25% від своєї лісозаготівлі через
+            відкриті аукціони системи Прозорро.Продажі. У цьому проекті ми аналізуємо відкриті дані Прозорро.
+            Продажі та розповідаємо наскільки успішним був урядовий експеримент із запуску відкритих
+            електронних торгів.</p>
+        <p>Уряд готує масштабну реформу ринку деревини. Міндовкілля пропонує лісгоспам продавати
+            необроблену деревину виключно через відкриті електронні аукціони. Це зробить ринок прозорішим
+            та зручнішим для всіх, а також виведе значні суми коштів із тіні. Минулого року уряд запустив «пілот»
+            цієї реформи, зобов’язавши великі лісгоспи реалізувати щонайменше 25% від своєї лісозаготівлі через
+            відкриті аукціони системи Прозорро.Продажі. У цьому проекті ми аналізуємо відкриті дані Прозорро.
+            Продажі та розповідаємо наскільки успішним був урядовий експеримент із запуску відкритих
+            електронних торгів.</p>
+    </div>
+
+
+
+    <div class="chart-wrapper">
+        <div class="top-buttons">
+            <div class="select" id="select-list-1">
+                <div class="select-wrapper round-button">
+                    <p style="margin-right: 50px;">Оберіть регіон</p>
+                    <div class="polygon"></div>
+                </div>
+                <ul class="dropdown hidden">
+                </ul>
+            </div>
+            <div class="round-button">
+                <p>Вибрано: <span id="selected-region-1">Волинська</span></p>
+            </div>
+        </div>
+
+        <div id="chart-2"></div>
+        <div>
+            <p>Кількість та успішність електронних
+                аукціонів в розрізі окремих лісгоспів.
+                Відображено лише ті лісгоспи, обсяг
+                лісозаготівлі в яких перевищував 100 000
+                куб. м. деревини у 2020 році.</p>
+            <p style="margin: 20px 0;"><span style="width:20px; height: 20px; display: inline-block; border-radius:50%; background-color: #529963;"></span>Всього аукціонів</p>
+            <p style="margin: 20px 0;"><span style="width:20px; height: 20px; display: inline-block; border-radius:50%; background-color: #316944;"></span>Успішних аукціонів</p>
+        </div>
+    </div>
+
+
+    <div class="text">
+        <p>Уряд готує масштабну реформу ринку деревини. Міндовкілля пропонує лісгоспам продавати
+            необроблену деревину виключно через відкриті електронні аукціони. Це зробить ринок прозорішим
+            та зручнішим для всіх, а також виведе значні суми коштів із тіні. Минулого року уряд запустив «пілот»
+            цієї реформи, зобов’язавши великі лісгоспи реалізувати щонайменше 25% від своєї лісозаготівлі через
+            відкриті аукціони системи Прозорро.Продажі. У цьому проекті ми аналізуємо відкриті дані Прозорро.
+            Продажі та розповідаємо наскільки успішним був урядовий експеримент із запуску відкритих
+            електронних торгів.</p>
+        <p>Уряд готує масштабну реформу ринку деревини. Міндовкілля пропонує лісгоспам продавати
+            необроблену деревину виключно через відкриті електронні аукціони. Це зробить ринок прозорішим
+            та зручнішим для всіх, а також виведе значні суми коштів із тіні. Минулого року уряд запустив «пілот»
+            цієї реформи, зобов’язавши великі лісгоспи реалізувати щонайменше 25% від своєї лісозаготівлі через
+            відкриті аукціони системи Прозорро.Продажі. У цьому проекті ми аналізуємо відкриті дані Прозорро.
+            Продажі та розповідаємо наскільки успішним був урядовий експеримент із запуску відкритих
+            електронних торгів.</p>
+    </div>
+
+    <div class="chart-wrapper">
+        <div class="top-buttons">
+            <div class="select" id="select-list-2">
+                <div class="select-wrapper round-button">
+                    <p style="margin-right: 50px;">Оберіть регіон</p>
+                    <div class="polygon"></div>
+                </div>
+                <ul class="dropdown hidden">
+                </ul>
+            </div>
+            <div class="round-button">
+                <p>Вибрано: <span id="selected-region-2">Волинська</span></p>
+            </div>
+        </div>
+
+        <div id="chart-3"></div>
+        <div>
+            <p>Порівняння обсягів лісозаготівлі та
+                електронних аукціонів. Відображено
+                лише ті лісгоспи, обсяг лісозаготівлі
+                в яких перевищував 100 000 куб. м.
+                деревини у 2020 роц</p>
+            <p style="margin: 20px 0;"><span style="width:20px; height: 20px; display: inline-block; border-radius:50%; background-color: #529963;"></span>Аукціони</p>
+            <p style="margin: 20px 0;"><span style="width:20px; height: 20px; display: inline-block; border-radius:50%; background-color: #316944;"></span>Лісозаготівля</p>
+        </div>
+    </div>
+
+
+
+
+</main>
+
+<footer>
+
+    <div class="content"> <!-- класс з грідом для контенту-->
+
+        <!-- створено Текстами -->
+        <div class="created-by-texty">
+            <p>Створено ТЕКСТами</p>
+            <img style="width: 180px" src="img/white_logo.svg">
+        </div>
+
+
+        <!-- Поширити -->
+        <div class="socio-wrapper">
+            <p>Поширити:</p>
+
+            <div class="socio-icons-box">
+
+                <!--fb-->
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://texty.org.ua/d/2020/ternopil_edmoney/" target="_blank" class="share-btn">
+                    <div class="icon-wrapper">
+                        <img class="icon-box" src="img/Vector.png"/>
+                        <img id="fb" style="" src="img/fb.png"/>
+                    </div>
+                </a>
+
+                <!--tw -->
+                <a href="https://twitter.com/intent/tweet?text=https://texty.org.ua/d/2020/ternopil_edmoney/" target="_blank" class="share-btn">
+                    <div class="icon-wrapper">
+                        <img class="icon-box" src="img/Vector.png"/>
+                        <img id="tw" style="" src="img/tw.png"/>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+    <!--<script src="lib/jquery-3.3.1.js"></script>-->
+
+<script charset="utf-8" src="lib/d3v5_min.js"></script>
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5"></script>
+
+    <!--<script src="lib/share-behavior.js"></script>-->
+<script src="js/variables.js"></script>
+<script src="js/line_chart.js"></script>
+<script src="js/stacked__1.js"></script>
+<script src="js/stacked__2.js"></script>
+
+    <!--<script>-->
+        <!--$('.collapsible').on('click', function(){-->
+            <!--$(this).find(".circle-plus").toggleClass('opened');-->
+            <!--$(this).find("p.ordinal").toggleClass("hidden");-->
+            <!--var el = $(this),-->
+                    <!--curHeight = el.height(),-->
+                    <!--autoHeight = el.css('height', 'max-content').height();-->
+            <!--el.height(curHeight).animate({height: autoHeight}, 100);-->
+        <!--})-->
+    <!--</script>-->
+
+
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-18136548-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>
