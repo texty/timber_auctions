@@ -112,7 +112,8 @@ Promise.all([
             .duration(750)
             .call(d3.axisLeft(y)
                 .ticks(5)
-                .tickFormat(nFormatter)
+                .tickFormat(function(d){
+                    return group != "success"  ?  nFormatter(d) : d+"%"})
                 .tickSize(-new_width)
             )
     }
