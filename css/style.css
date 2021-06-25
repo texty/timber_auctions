@@ -791,6 +791,7 @@ ul.dropdown {
   outline: none; }
 
 footer {
+  margin-top: 100px;
   padding: 60px 0;
   background-color: #000000; }
   footer p {

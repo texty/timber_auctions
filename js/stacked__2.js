@@ -98,7 +98,7 @@ d3.csv("data/fig_3.csv").then(function(input){
         xScale
             .rangeRound([0, new_width])
             .domain([0, d3.max(df, function (d) {
-                return (Math.max(d.usable_wood_volume + d.timber_volume))
+                return (Math.max(d.usable_wood_volume, d.timber_volume))
             })]);
 
         yScale
@@ -126,109 +126,111 @@ d3.csv("data/fig_3.csv").then(function(input){
                 // })
             );
 
-         var keys = ["timber_volume", "usable_wood_volume"];
-         var layers = d3.stack().keys(keys)(df);
+        //  var keys = ["timber_volume", "usable_wood_volume"];
+        //  var layers = d3.stack().keys(keys)(df);
+        //
+        // console.log(layers);
+        //
+        // var group = svg.selectAll("g.layer")
+        //     .data(layers);
+        //
+        // group.exit().remove();
+        //
+        // group.enter()
+        //     .append("g")
+        //     .classed("layer", true)
+        //     .attr("fill", function (d) { return color(d.key) })
+        //     .attr("group", function (d) { return d.key });
+        //
+        // var bars = svg.selectAll("g.layer")
+        //     .selectAll("rect")
+        //     .data(function (d) { return d; });
+        //
+        // bars.exit().remove();
+        //
+        // bars.enter()
+        //     .append("rect")
+        //     .attr("class", "tip")
+        //     .attr("width", function (d) {
+        //         return xScale(d[1]) - xScale(d[0]) })
+        //     .attr("y", function (d) { return yScale(d.data.user_company) })
+        //     .attr("x", function () { return xScale(0); })
+        //     .attr("height", yScale.bandwidth())
+        //     .attr("rx", yScale.bandwidth() / 2)
+        //     .attr("ry", yScale.bandwidth() /2 )
+        //     .merge(bars)
+        //     .attr("height", yScale.bandwidth())
+        //     .attr("y", function (d) { return yScale(d.data.user_company); })
+        //     .attr("x", function (d) { return xScale(d[0]); })
+        //     .transition().duration(750)
+        //     .attr("width", function (d) { return xScale(d[1]) - xScale(d[0]) })
+        //
+        // ;
 
-        console.log(layers);
 
-        var group = svg.selectAll("g.layer")
-            .data(layers);
 
-        group.exit().remove();
 
-        group.enter()
-            .append("g")
-            .classed("layer", true)
-            .attr("fill", function (d) { return color(d.key) })
-            .attr("group", function (d) { return d.key });
 
-        var bars = svg.selectAll("g.layer")
-            .selectAll("rect")
-            .data(function (d) { return d; });
+        var bars_1 = svg.selectAll("rect.auctions")
+            .data(df);
 
-        bars.exit().remove();
+        bars_1.exit().remove();
 
-        bars.enter()
+        bars_1.enter()
             .append("rect")
-            .attr("class", "tip")
+            .attr("class", "auctions tip")
             .attr("width", function (d) {
-                return xScale(d[1]) - xScale(d[0]) })
-            .attr("y", function (d) { return yScale(d.data.user_company) })
-            .attr("x", function () { return xScale(0); })
+                return xScale(d.usable_wood_volume)
+            })
+            .attr("y", function (d) {
+                return xScale(d.user_company)
+            })
+            .attr("x", function () {
+                return xScale(0);
+            })
             .attr("height", yScale.bandwidth())
             .attr("rx", yScale.bandwidth() / 2)
-            .attr("ry", yScale.bandwidth() /2 )
-            .merge(bars)
-            .attr("height", yScale.bandwidth())
-            .attr("y", function (d) { return yScale(d.data.user_company); })
-            .attr("x", function (d) { return xScale(d[0]); })
-            .transition().duration(750)
-            .attr("width", function (d) { return xScale(d[1]) - xScale(d[0]) })
+            .attr("ry", yScale.bandwidth() / 2)
+            .style("stroke", "#529963")
+            .style("stroke-width", "2px")
+            .style("fill", "transparent")
+           // .style("opacity", 0.5)
+            .merge(bars_1)
+            .attr("y", function (d) {
+                return yScale(d.user_company);
+            })
+            .attr("x", function (d) {
+                return xScale(0);
+            })
+            .transition().duration(500)
+            .attr("width", function (d) {
+                return xScale(d.usable_wood_volume)
+            })
 
         ;
 
 
+        var bars_2 = svg.selectAll("rect.complete")
+            .data(df);
 
+        bars_2.exit().remove();
 
-
-        // var bars_1 = svg.selectAll("rect.auctions")
-        //     .data(df);
-        //
-        // bars_1.exit().remove();
-        //
-        // bars_1.enter()
-        //     .append("rect")
-        //     .attr("class", "auctions tip")
-        //     .attr("width", function (d) {
-        //         return xScale(d.usable_wood_volume)
-        //     })
-        //     .attr("y", function (d) {
-        //         return xScale(d.user_company)
-        //     })
-        //     .attr("x", function () {
-        //         return xScale(0);
-        //     })
-        //     .attr("height", yScale.bandwidth()/2)
-        //     .attr("rx", yScale.bandwidth() / 4)
-        //     .attr("ry", yScale.bandwidth() / 4)
-        //     .style("fill", "#529963")
-        //     //.style("opacity", 0.5)
-        //     .merge(bars_1)
-        //     .attr("y", function (d) {
-        //         return yScale(d.user_company);
-        //     })
-        //     .attr("x", function (d) {
-        //         return xScale(0);
-        //     })
-        //     .transition().duration(500)
-        //     .attr("width", function (d) {
-        //         return xScale(d.usable_wood_volume)
-        //     })
-        //
-        // ;
-        //
-        //
-        // var bars_2 = svg.selectAll("rect.complete")
-        //     .data(df);
-        //
-        // bars_2.exit().remove();
-        //
-        // bars_2.enter()
-        //     .append("rect")
-        //     .attr("class", "complete tip")
-        //     .attr("width", function (d) { return xScale(d.timber_volume) })
-        //     .attr("y", function (d) { return yScale(d.user_company) + yScale.bandwidth()/2})
-        //     .attr("x", function (d) { return xScale(0); })
-        //     .attr("height", yScale.bandwidth()/2)
-        //     .attr("rx", yScale.bandwidth() / 4)
-        //     .attr("ry", yScale.bandwidth() / 4)
-        //     .style("fill", "#316944" )
-        //     //.style("opacity", 0.5)
-        //     .merge(bars_2)
-        //     .attr("y", function (d) { return yScale(d.user_company) + yScale.bandwidth()/2})
-        //     .attr("x", function (d) { return xScale(0);   })
-        //     .transition().duration(500)
-        //     .attr("width", function (d) { return xScale(d.timber_volume) });
+        bars_2.enter()
+            .append("rect")
+            .attr("class", "complete tip")
+            .attr("width", function (d) { return xScale(d.timber_volume) })
+            .attr("y", function (d) { return yScale(d.user_company)})
+            .attr("x", function (d) { return xScale(0); })
+            .attr("height", yScale.bandwidth())
+            .attr("rx", yScale.bandwidth() / 2)
+            .attr("ry", yScale.bandwidth() / 2)
+            .style("fill", "#316944" )
+            .style("opacity", 0.5)
+            .merge(bars_2)
+            .attr("y", function (d) { return yScale(d.user_company)})
+            .attr("x", function (d) { return xScale(0);   })
+            .transition().duration(500)
+             .attr("width", function (d) { return xScale(d.timber_volume) });
 
     }
 
