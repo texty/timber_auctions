@@ -6,7 +6,7 @@ d3.csv("data/fig_3.csv").then(function(input){
         d.usable_wood_volume = +d.usable_wood_volume;       
     });
 
-    var regions =  [...new Set(input.map(function (d) { return d.region; })) ];
+    var regions =  [...new Set(input.map(function (d) { return d.region; })) ].sort(function(a,b){ return d3.ascending(a,b)});
     var default_region = "Волинська";
     var bar_height = 17
 

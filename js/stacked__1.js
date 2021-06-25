@@ -6,8 +6,8 @@ d3.csv("data/fig_2.csv").then(function(input){
         d.complete = +d.complete;
         d.dif = d.auctions - d.complete;
     });
-    
-    var regions =  [...new Set(input.map(function (d) { return d.region; })) ];
+
+    var regions =  [...new Set(input.map(function (d) { return d.region; })) ].sort(function(a,b){ return d3.ascending(a,b)});
     var default_region = "Волинська";
     
     d3.select("#select-list-1").select("ul")
