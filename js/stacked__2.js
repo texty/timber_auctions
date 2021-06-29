@@ -106,7 +106,7 @@ d3.csv("data/fig_3.csv").then(function(input){
 
         d3.select('.x-axis-label-2')
             .attr("x", (new_width - margin.left - margin.right) / 2)
-            .attr("y", new_height + margin.bottom/2);
+            .attr("y", new_height + margin.bottom/2+ 10);
 
         xScale
             .rangeRound([0, new_width])

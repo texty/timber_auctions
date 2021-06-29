@@ -109,7 +109,7 @@ d3.csv("data/fig_2.csv").then(function(input){
 
         d3.select('.x-axis-label')
             .attr("x", (new_width - margin.left - margin.right) / 2)
-            .attr("y", new_height + margin.bottom/2);
+            .attr("y", new_height + margin.bottom/2 + 10);
 
 
         xScale
