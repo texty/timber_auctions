@@ -33,7 +33,7 @@ d3.csv("data/fig_3.csv").then(function(input){
     });
 
 
-    const margin = {top: 40, right: 10, bottom: 50, left: 150},
+    const margin = {top: 80, right: 10, bottom: 80, left: 150},
         width = d3.select("#chart-3").node().getBoundingClientRect().width - margin.left - margin.right,
         height = 800 - margin.top - margin.bottom;
 
@@ -44,6 +44,15 @@ d3.csv("data/fig_3.csv").then(function(input){
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + 0 + ")");
+
+
+    svg.append("text")
+        .attr('class', "x-axis-label-2")
+        .attr("x", (width - margin.left - margin.right)/2)
+        .attr("y", 440)
+        .attr("text-anchor", "center")
+        .text("куб. м деревини")
+        .style("font-size", "16px");
 
     var xScale = d3
         .scaleLinear();
@@ -94,6 +103,10 @@ d3.csv("data/fig_3.csv").then(function(input){
         d3.select("#chart-3").select("svg")
             .attr("width", new_width + margin.left + margin.right)
             .attr("height", new_height + margin.top);
+
+        d3.select('.x-axis-label-2')
+            .attr("x", (new_width - margin.left - margin.right) / 2)
+            .attr("y", new_height + margin.bottom/2);
 
         xScale
             .rangeRound([0, new_width])

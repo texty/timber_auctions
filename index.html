@@ -89,7 +89,9 @@
         <p>Донедавна лісгоспи реалізовували переважну більшість деревини за допомогою &laquo;прямих договорів&raquo; із
             покупцями-деревообробниками. Це дозволяло лісгоспам отримувати швидкі доходи, щоб латати дірки у бюджетах,
             та водночас не надто перейматися власною ефективністю. Деревообробні підприємства натомість отримували
-            стабільний та передбачуваний потік сировини, щоб завантажувати свої виробничі потужності.<br/>Така схема
+            стабільний та передбачуваний потік сировини, щоб завантажувати свої виробничі потужності.</p>
+
+        <p>Така схема
             господарювання забезпечила виживання українській лісовій галузі під час розвалу Радянського Союзу, але її
             збереження продовжить гальмувати економічний розвиток держави та породжувати значні корупційні ризики.
             Укладання прямих договорів унеможливлює рівний доступ усіх покупців до ресурсу та спотворює формування
@@ -103,19 +105,41 @@
             Кабміну, що зобов&rsquo;язує великі лісгоспи продавати щонайменше 25 % від обсягу своєї заготівлі за
             допомогою електронної торгової системи &laquo;<a href="https://prozorro.sale/">Прозорро.Продажі</a>&raquo;.
         </p>
-    </div>
 
 
-    <div class="background">
-        <div class="text">
-            <div class="hr" style="width: 60%; max-width: 500px; "></div>
-            <h2 style="font-size: 25px; width: 70%; max-width: 500px; ">Що таке «Прозорро.Продажі»?</h2>
-            <p style="width: 70%; max-width: 500px; margin-bottom: 50px;">Це державна електронна система, основна мета
-                якої – забезпечувати прозорий розподіл державного (або комунального) майна через аукціони на понад
-                кількох десятках комерційних торгових майданчиків.
-            </p>
+
+    <div class="description collapsible" style="">
+        <!--щапка-->
+        <div class="collaps-header">
+            <img class="finger-icon" src="img/finger_up.png"/>
+            <p>Що таке «Прозорро. Продажі»?</p>
+            <div class="circle-plus closed">
+                <div class="circle">
+                    <div class="horizontal"></div>
+                    <div class="vertical"></div>
+                </div>
+            </div>
         </div>
+
+        <p class="ordinal height-0" style="max-height: 1px; overflow: hidden;">
+            Це державна електронна система, основна мета
+            якої – забезпечувати прозорий розподіл державного (або комунального) майна через аукціони на понад
+            кількох десятках комерційних торгових майданчиків.</p>
     </div>
+
+    </div>
+    <!--<div class="background">-->
+        <!--<div class="description collapsible">-->
+            <!--<div class="hr" style="width: 60%; max-width: 500px; "></div>-->
+            <!--<h2 style="font-size: 25px; width: 70%; max-width: 500px; ">Що таке «Прозорро.Продажі»?</h2>-->
+            <!--<p style="width: 70%; max-width: 500px; margin-bottom: 50px;">Це державна електронна система, основна мета-->
+                <!--якої – забезпечувати прозорий розподіл державного (або комунального) майна через аукціони на понад-->
+                <!--кількох десятках комерційних торгових майданчиків.-->
+            <!--</p>-->
+        <!--</div>-->
+    <!--</div>-->
+
+
     <div class="text">
 
         <h2 class="chapter">Тернистий шлях реформ</h2>
@@ -210,8 +234,8 @@
 
             <div id="chart-2"></div>
             <div>
-                <p>Кількість та успішність електронних аукціонів в розрізі окремих лісгоспів. Відображено лише ті
-                    лісгоспи, обсяг лісозаготівлі в яких перевищував 100 000 куб. м. деревини у 2020 році.</p>
+                <!--<p>Відображено лише ті-->
+                    <!--лісгоспи, обсяг лісозаготівлі в яких перевищував 100 000 куб. м. деревини у 2020 році.</p>-->
                 <p class="legend" style=""><span style="border: 2px solid  #529963;"></span>Всього аукціонів</p>
                 <p class="legend"><span style="opacity: 0.5; background-color: #316944;"></span>Успішних аукціонів</p>
             </div>
@@ -249,11 +273,11 @@
 
             <div id="chart-3"></div>
             <div>
-                <p>Порівняння обсягів лісозаготівлі та
-                    електронних аукціонів. Відображено
-                    лише ті лісгоспи, обсяг лісозаготівлі
-                    в яких перевищував 100 000 куб. м.
-                    деревини у 2020 роц</p>
+                <!--<p>Порівняння обсягів лісозаготівлі та-->
+                    <!--електронних аукціонів. Відображено-->
+                    <!--лише ті лісгоспи, обсяг лісозаготівлі-->
+                    <!--в яких перевищував 100 000 куб. м.-->
+                    <!--деревини у 2020 роц</p>-->
                 <p class="legend"><span style="border: 2px solid  #529963;"></span>Лісозаготівля</p>
                 <p class="legend"><span style="opacity: 0.5; background-color: #316944;"></span>Аукціони</p>
             </div>
@@ -371,16 +395,25 @@
 <script src="js/stacked__1.js"></script>
 <script src="js/stacked__2.js"></script>
 
-<!--<script>-->
-<!--$('.collapsible').on('click', function(){-->
-<!--$(this).find(".circle-plus").toggleClass('opened');-->
-<!--$(this).find("p.ordinal").toggleClass("hidden");-->
-<!--var el = $(this),-->
-<!--curHeight = el.height(),-->
-<!--autoHeight = el.css('height', 'max-content').height();-->
-<!--el.height(curHeight).animate({height: autoHeight}, 100);-->
-<!--})-->
-<!--</script>-->
+<script>
+   d3.select('.collapsible').on('click', function(){
+       let circle_plus = d3.select(this).select(".circle-plus");
+       circle_plus.classed("closed", !circle_plus.classed("closed"));
+       circle_plus.classed("opened", !circle_plus.classed("opened"));
+
+       let paragraph = d3.select("p.ordinal");
+       paragraph.classed("height-0", !paragraph.classed("height-0"));
+
+       let collaps_height = window.innerWidth > 990 ? "120px" : "200px";
+
+       d3.select("p.ordinal")
+               .transition()
+               .duration(500)
+               .style("max-height", d3.select("p.ordinal").classed("height-0") ? "1px" : "500px")
+               .style("overflow", "hidden");
+
+    })
+</script>
 
 
 <script type="text/javascript">

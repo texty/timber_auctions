@@ -1,5 +1,9 @@
 @charset "UTF-8";
 @font-face {
+  font-family: 'e-UkraineHead-Medium';
+  src: url("../font/e-UkraineHead-Medium.eot"), url("../font/e-UkraineHead-Medium.eot?#iefix") format("embedded-opentype"), url("../font/e-UkraineHead-Medium.woff2") format("woff2"), url("../font/e-UkraineHead-Medium.woff") format("woff"), url("../font/e-UkraineHead-Medium.ttf") format("truetype");
+  font-weight: normal; }
+@font-face {
   font-family: 'e-Ukraine-Regular';
   src: url("../font/e-Ukraine-Regular.eot"), url("../font/e-Ukraine-Regular.eot?#iefix") format("embedded-opentype"), url("../font/e-Ukraine-Regular.woff2") format("woff2"), url("../font/e-Ukraine-Regular.woff") format("woff"), url("../font/e-Ukraine-Regular.ttf") format("truetype");
   font-weight: normal; }
@@ -12,12 +16,12 @@
   src: url("../font/e-Ukraine-Light.eot"), url("../font/e-Ukraine-Light.eot?#iefix") format("embedded-opentype"), url("../font/e-Ukraine-Light.woff2") format("woff2"), url("../font/e-Ukraine-Light.woff") format("woff"), url("../font/e-Ukraine-Light.ttf") format("truetype");
   font-weight: 300; }
 body {
-  font-family: 'e-Ukraine-Regular', sans-serif;
+  font-family: 'e-Ukraine-Light', sans-serif;
   margin: 0;
   padding: 0; }
 
 .background {
-  background-color: #F1F1F1;
+  background-color: #e5ebe6;
   padding: 50px 0; }
 
 .chart-wrapper {
@@ -142,12 +146,19 @@ body {
     border-radius: 50%;
     font-size: 16px; }
 
+.height-0 {
+  max-height: 1px;
+  overflow-y: hidden; }
+
+.height-max {
+  height: max-content; }
+
 /*-----------------------------------
 --------------- header --------------
 -------------------------------------*/
 header {
   position: relative;
-  background-color: #FFF7E3;
+  background-color: #e5ebe6;
   width: 100%;
   margin: auto;
   display: grid;
@@ -190,8 +201,7 @@ header {
           width: 90%;
           margin: 50px auto; } }
       header .title-wrapper .title h1 {
-        font-family: 'e-Ukraine-Regular', sans-serif;
-        font-style: normal;
+        font-family: 'e-UkraineHead-Medium', sans-serif;
         font-weight: normal;
         font-size: 56px;
         line-height: 60px;
@@ -348,7 +358,7 @@ header {
       padding: 10vw 0; } }
 
 #chapter-1, #chapter-3 {
-  background-color: #FFF7E3; }
+  background-color: #e5ebe6; }
 
 /* ---------------------------------------
    -----------  основний текст ---------- */
@@ -381,11 +391,11 @@ h4 {
 p, ul, li {
   margin: 0;
   grid-column: 1/3;
-  font-family: 'e-Ukraine-Regular', sans-serif;
+  font-family: 'e-Ukraine-Light', sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 1.6;
   letter-spacing: -0.02em; }
 
 a {
@@ -489,7 +499,7 @@ a {
   padding: 30px;
   border: 2px solid;
   border-image: radial-gradient(92.76% 76.25% at 7.24% 21%, #B5D39D 0%, #F1ACAC 25.66%, #BF98C6 54.47%, #7179EF 86.04%, #2833D0 100%) 1;
-  background-color: #FFF7E3; }
+  background-color: #e5ebe6; }
 
 /* ---------------------------------------
    ----------------  врізка ------------- */
@@ -513,7 +523,7 @@ a {
   margin: 20px 0;
   padding: 5%;
   width: 80%;
-  background-color: #FFF7E3; }
+  background-color: #e5ebe6; }
   .attention text {
     font-size: calc(40px + 3vw); }
     @media (max-width: 1000px) {
@@ -867,6 +877,9 @@ footer {
   #chart_5 {
     display: none; } }
 .collapsible {
+  grid-column: 1/3;
+  width: 70%;
+  margin-top: 100px;
   cursor: pointer;
   padding: 20px;
   border: double 2px transparent;
@@ -877,6 +890,9 @@ footer {
   transition: all 0.4s;
   overflow-y: hidden;
   background-clip: padding-box, border-box; }
+  @media (max-width: 800px) {
+    .collapsible {
+      width: 90%; } }
   .collapsible .collaps-header {
     position: relative;
     display: flex;
@@ -885,9 +901,6 @@ footer {
       height: 36px;
       width: 36px;
       margin-right: 5px; }
-      @media (min-width: 1280px) {
-        .collapsible .collaps-header img {
-          transform: rotate(-90deg); } }
     .collapsible .collaps-header p {
       width: 90%;
       font-size: 1.2em;

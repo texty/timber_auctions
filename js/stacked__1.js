@@ -33,7 +33,7 @@ d3.csv("data/fig_2.csv").then(function(input){
     });
 
 
-    const margin = {top: 40, right: 10, bottom: 50, left: 150},
+    const margin = {top: 80, right: 10, bottom: 80, left: 150},
         width = d3.select("#chart-2").node().getBoundingClientRect().width - margin.left - margin.right,
         height = 800 - margin.top - margin.bottom;
 
@@ -60,6 +60,15 @@ d3.csv("data/fig_2.csv").then(function(input){
     svg.append("g")
         .attr("class", "y-axis")
         .attr("transform", "translate(" + 0 + "," + 0 + ")");
+
+
+    svg.append("text")
+        .attr('class', "x-axis-label")
+        .attr("x", (width - margin.left - margin.right)/2)
+        .attr("y", 440)
+        .attr("text-anchor", "center")
+        .text("кількість аукціонів")
+        .style("font-size", "16px");
 
     var color = d3.scaleOrdinal()
         .domain(["plans", "budget"])
@@ -92,11 +101,15 @@ d3.csv("data/fig_2.csv").then(function(input){
 
 
         var new_width = d3.select("#chart-2").node().getBoundingClientRect().width - margin.left - margin.right;
-        var new_height = df.length * 17;
+        var new_height = df.length * 17 + 50;
 
         d3.select("#chart-2").select("svg")
             .attr("width", new_width + margin.left + margin.right)
             .attr("height", new_height + margin.top);
+
+        d3.select('.x-axis-label')
+            .attr("x", (new_width - margin.left - margin.right) / 2)
+            .attr("y", new_height + margin.bottom/2);
 
 
         xScale
@@ -106,7 +119,7 @@ d3.csv("data/fig_2.csv").then(function(input){
             })]);
 
         yScale
-            .rangeRound([df.length * 17, 0])
+            .rangeRound([new_height, 0])
             .domain(y_domain);
 
 
